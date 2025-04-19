@@ -21,6 +21,11 @@ export default function NavbarDesktop() {
   const [navBg, setNavBg] = useState(false);
 
   useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", open);
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [open]);
+
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 95) setNavBg(true);
       if (window.scrollY < 95) setNavBg(false);

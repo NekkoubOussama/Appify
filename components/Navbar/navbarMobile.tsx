@@ -1,4 +1,3 @@
-"use client";
 import clsx from "clsx";
 import { X } from "lucide-react";
 import Link from "next/link";
@@ -29,7 +28,7 @@ export default function NavbarMobile({
       />
       <div
         className={clsx(
-          "w-[80%] sm:w-[65%] z-50 fixed top-0 left-0 bg-[#312e81] h-full transform transition-all ease-in-out duration-500 ",
+          "w-[80%] sm:w-[65%] z-50 fixed top-0 left-0 bg-[#312e81] h-screen transform transition-all ease-in-out duration-500 ",
           open ? "translate-x-0 delay-300" : "-translate-x-full delay-300 "
         )}
       >

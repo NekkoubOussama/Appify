@@ -51,7 +51,6 @@ h1 {
 h2 {
   font-weight: 700;
   line-height: 2rem;
-  text-align: center;
   text-transform: capitalize;
   font-size: 1.5rem;
 }
@@ -73,48 +72,57 @@ h2 {
 @utility text-Mediumbody4 {
   @apply text-[12px] leading-[16px] font-medium;
 }
-@theme {
-  --animate-fade-in: fade-in 1s ease-in-out forwards;
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-      transform: translateY(55px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+@layer utilities {
+  .fade-in {
+    animation: fade-in 0.8s ease-in-out forwards;
+  }
+
+  .fade-left {
+    animation: fade-left 1s ease-in-out forwards;
+  }
+
+  .pop {
+    animation: pop 1s ease-in-out forwards;
+  }
+
+  .delay-500 {
+    animation-delay: 100ms;
   }
 }
 
-@theme {
-  --animate-fade-left: fade-left 1s ease-in-out forwards;
-  @keyframes fade-left {
-    0% {
-      opacity: 0;
-      transform: translateX(-40px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(110px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@theme {
-  --animate-pop: pop 1s ease-in-out forwards;
-  @keyframes pop {
-    0% {
-      opacity: 0;
-      scale: 0;
-    }
-    100% {
-      opacity: 1;
-      scale: 1;
-    }
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-700px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 /* body {
   background: var(--background);
   color: var(--foreground);
