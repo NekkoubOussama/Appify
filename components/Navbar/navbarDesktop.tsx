@@ -62,7 +62,7 @@ export default function NavbarDesktop() {
           ))}
         </ul>
         <NavbarMobile open={open} setOpen={setOpen} />
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 lg:space-x-0">
           <Button intent={"primary"} size={"normal"}>
             Join Now
           </Button>

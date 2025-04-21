@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  " leading-[1.5rem]  w-fit transition-all duration-200 cursor-pointer disabled:cursor-context-menu flex items-center gap-[0.5rem]",
+  " leading-[1.5rem] w-fit transition-all duration-200 cursor-pointer disabled:cursor-context-menu flex items-center justify-center gap-[0.5rem] ",
   {
     variants: {
       intent: {
@@ -11,10 +11,11 @@ const buttonVariants = cva(
         secondary:
           "bg-silver text-black shadow-sm hover:bg-shade6 hover:text-white font-medium rounded-full",
         tertiary: "bg-white text-shade2 hover:text-shade7 font-semibold",
-        square: "bg-primary text-white hover:bg-shade2 font-semibold shadow-sm",
+        square:
+          "bg-blue-900 text-white hover:bg-blue-950 font-semibold shadow-sm",
       },
       size: {
-        big: "py-2 px-6 md:px8 md:py-2.5 text-[1rem]",
+        big: "p-4 md:px-8 md:py-4 text-[1rem] md:text-lg w-full",
         normal: "py-[0.625rem] px-[2rem] text-[1rem]",
         medium: "py-[0.25rem] px-[1.25rem] text-[1rem]",
         small: "h-[1.5rem] text-[1rem]",
