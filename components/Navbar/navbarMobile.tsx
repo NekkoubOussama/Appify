@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { X } from "lucide-react";
 import Link from "next/link";
+import Logo from "../logo";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -32,7 +33,8 @@ export default function NavbarMobile({
           open ? "translate-x-0 delay-300" : "-translate-x-full delay-300 "
         )}
       >
-        <div className=" flex justify-end pt-8 pr-[7%]">
+        <div className=" flex flex-row justify-between items-center p-7">
+          <Logo color="text-white" />
           <X
             width={26}
             height={26}

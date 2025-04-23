@@ -15,8 +15,8 @@ const buttonVariants = cva(
           "bg-blue-900 text-white hover:bg-blue-950 font-semibold shadow-sm",
       },
       size: {
-        big: "p-4 md:px-8 md:py-4 text-[1rem] md:text-lg w-full",
-        normal: "py-[0.625rem] px-[2rem] text-[1rem]",
+        big: "py-4 px-8 md:px-8 md:py-4 text-[1rem] md:text-lg",
+        normal: "md:px-8 md:py-2.5 px-6 py-2 text-[1rem]",
         medium: "py-[0.25rem] px-[1.25rem] text-[1rem]",
         small: "h-[1.5rem] text-[1rem]",
       },

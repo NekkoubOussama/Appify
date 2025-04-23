@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="flex justify-center items-center w-[90%] sm:w-[80%] h-full mx-auto">
         <div className="lg:w-[55%] ">
           <div className="w-fit bg-white rounded-4xl space-x-3 flex items-center justify-center py-1.5 px-5 shadow-md fade-left text-[0.75rem] lg:text-[0.875rem] lg:leading-[1.25rem]">
-            <div className="bg-primary text-white lg:py-[0.25rem] lg:px-[1.25rem] px-3 py-1 rounded-full text-[1rem] leading-[1.5rem]">
+            <div className="bg-primary text-white lg:py-[0.25rem] lg:px-[1.25rem] px-3 py-1 rounded-full lg:text-[1rem] lg:leading-[1.5rem]">
               News
             </div>
             <p>We have updated our term & condition policy</p>

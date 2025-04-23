@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import ResponsiveFooter from "@/components/Footer/responsiveFooter";
 import NavbarDesktop from "@/components/Navbar/navbarDesktop";
+import FooterDesktop from "@/components/Footer/footerDesktop";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} antialiased`}>
         <NavbarDesktop />
         {children}
-        <ResponsiveFooter />
+        <FooterDesktop />
       </body>
     </html>
   );
