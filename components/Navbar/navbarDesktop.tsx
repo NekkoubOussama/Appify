@@ -27,8 +27,7 @@ export default function NavbarDesktop() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 95) setNavBg(true);
-      if (window.scrollY < 95) setNavBg(false);
+      setNavBg(window.scrollY >= 95);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll);
@@ -43,7 +42,7 @@ export default function NavbarDesktop() {
         "w-full transition-all duration-200 h-[12vh] z-30  top-0 left-0 right-0",
         navBg
           ? "bg-white backdrop-blur shadow-md fixed"
-          : "bg-transparent fixed"
+          : "bg-transparent fixed backdrop-blur-sm"
       )}
     >
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">

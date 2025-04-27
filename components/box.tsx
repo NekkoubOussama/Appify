@@ -12,7 +12,7 @@ type BoxProps = {
 };
 export function BoxWhy(props: BoxProps) {
   return (
-    <div className="flex flex-col justify-center items-center max-w-[240px] mx-auto transition-all duration-200 delay-300 fade-left">
+    <div className="flex flex-col justify-center items-center max-w-[240px] mx-auto transition-all fade-left">
       <Image width={80} height={80} src={props.Icon} alt="icon" />
       <h3 className="py-5 font-semibold leading-[1.75rem] text-[1.125rem] text-center">
         {props.Titel}
@@ -51,14 +51,14 @@ type CardProps = {
 };
 export function ClientCard(props: CardProps) {
   return (
-    <div className="flex flex-col-reverse lg:flex-row w-[90%] relative mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+    <div className="flex flex-col-reverse lg:flex-row w-[90%] relative mx-2 p-6 bg-white shadow-lg rounded-lg mt-10 embla__slide lg:mx-10">
       <Quote
         color="#e4e4e4"
         strokeWidth={2}
         className="rotate-180 absolute top-8 left-5"
         size={56}
       />
-      <div className="lg:w-[55%] z-10 flex flex-col justify-center  w-full ">
+      <div className="lg:w-[60%] z-10 flex flex-col justify-center  w-full ">
         <p className="mt-8 text-gray-600 font-medium mb-6 leading-[1.5rem] sm:leading-[1.8rem] md:leading-[2.5rem] text-sm sm:text-base md:text-lg">
           {props.Text}
         </p>
@@ -80,7 +80,7 @@ export function ClientCard(props: CardProps) {
       <Image
         src={props.Icon}
         alt={props.Name}
-        className="rounded-full self-center mx-auto"
+        className="rounded-full self-center mx-auto shadow-2px "
         width={250}
         height={250}
       />
