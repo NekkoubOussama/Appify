@@ -12,7 +12,7 @@ const appLinks = [
 
 export default function Hero() {
   return (
-    <section className=" bg-bg1 h-screen pt-[8vh] md:pt-[12vh] w-full pb-[2vh] ">
+    <section className=" bg-bg1 h-screen pt-[6vh] md:pt-[12vh] w-full pb-[2vh] ">
       <div className="flex justify-center items-center w-[90%] sm:w-[80%] h-full mx-auto">
         <div className="lg:w-[55%] ">
           <div className="w-fit bg-white rounded-4xl space-x-3 flex items-center justify-center py-1.5 px-5 shadow-md fade-left text-[0.75rem] lg:text-[0.875rem] lg:leading-[1.25rem]">
