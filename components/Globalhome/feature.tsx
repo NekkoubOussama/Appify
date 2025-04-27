@@ -31,6 +31,7 @@ export default function Feature() {
       <div className="grid mt-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto w-[90%] sm:w-[80%]">
         {features.map(({ icon: Icon, color, text }, index) => (
           <BoxFeature
+            index={index}
             key={index}
             Text={text}
             Icon={<Icon className={color} width={32} height={32} />}

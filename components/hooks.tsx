@@ -61,6 +61,7 @@ export function useInView(options: IntersectionOptions = {}): {
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const observer = useRef<IntersectionObserver | null>(null);
+  const hasAnimated = useRef(false); // <<< track if already triggered
 
   useEffect(() => {
     const currentRef = ref.current; // Store ref.current in a variable
@@ -71,7 +72,11 @@ export function useInView(options: IntersectionOptions = {}): {
 
     // Create a new observer
     observer.current = new IntersectionObserver(([entry]) => {
-      setInView(entry.isIntersecting);
+      if (entry.isIntersecting && !hasAnimated.current) {
+        setInView(true);
+        hasAnimated.current = true;
+        observer.current?.disconnect(); // Disconnect after first trigger
+      }
     }, options);
 
     // If the element is attached, start observing it

@@ -1,18 +1,30 @@
+"use client";
 import React from "react";
 import Button from "./button";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import { BadgeCheck, BadgeX, Quote, Star } from "lucide-react";
+import { useInView } from "./hooks";
+import clsx from "clsx";
 
 type BoxProps = {
   Titel: string;
   Button: string;
   Texte: string;
   Icon: StaticImageData;
+  index: number;
 };
 export function BoxWhy(props: BoxProps) {
+  const { inView, ref } = useInView();
   return (
-    <div className="flex flex-col justify-center items-center max-w-[240px] mx-auto transition-all fade-left">
+    <div
+      ref={ref}
+      className={clsx(
+        "flex flex-col justify-center items-center max-w-[240px] mx-auto transition-all opacity-0",
+        inView ? "fade-left" : ""
+      )}
+      style={{ animationDelay: `${props.index * 200}ms` }}
+    >
       <Image width={80} height={80} src={props.Icon} alt="icon" />
       <h3 className="py-5 font-semibold leading-[1.75rem] text-[1.125rem] text-center">
         {props.Titel}
@@ -30,10 +42,19 @@ export function BoxWhy(props: BoxProps) {
 type Box2Props = {
   Text: string;
   Icon: React.JSX.Element;
+  index: number;
 };
 export function BoxFeature(props: Box2Props) {
+  const { inView, ref } = useInView();
   return (
-    <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-md space-x-3 transform transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-xl hover:scale-105 hover:-translate-y-1 hover:ring-1 hover:ring-gray-200">
+    <div
+      ref={ref}
+      className={clsx(
+        "flex items-center justify-center p-4 bg-white rounded-lg shadow-md space-x-3 opacity-0 transform transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-xl hover:scale-105 hover:-translate-y-1 hover:ring-1 hover:ring-gray-200 ",
+        inView ? "flip-right " : ""
+      )}
+      style={{ animationDelay: `${props.index * 250}ms` }}
+    >
       <div className="text-3xl w-14 h-14 bg-gray-800/10 flex items-center justify-center flex-col rounded-full ">
         {props.Icon}
       </div>
@@ -106,8 +127,15 @@ type Card2Props = {
   Texts: TextsItem[];
 };
 export function PriceCard(props: Card2Props) {
+  const { inView, ref } = useInView({ threshold: 0.3 });
   return (
-    <div className="bg-white p-12 rounded-lg shadow-lg">
+    <div
+      ref={ref}
+      className={clsx(
+        "bg-white p-12 rounded-lg shadow-lg opacity-0",
+        inView ? "fade-in " : ""
+      )}
+    >
       <p className="mt-8 text-xl font-semibold text-blue-600 text-center">
         {props.Title}
       </p>

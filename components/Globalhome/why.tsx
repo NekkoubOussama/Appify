@@ -52,6 +52,7 @@ export default function why() {
             Texte={boxContent.Text}
             Titel={boxContent.Titel}
             Button={boxContent.Button}
+            index={index}
             key={index}
           />
         ))}
