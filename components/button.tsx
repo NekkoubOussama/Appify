@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  " leading-[1.5rem] w-fit transition-all duration-200 cursor-pointer disabled:cursor-context-menu flex items-center justify-center gap-[0.5rem] ",
+  " leading-[1.5rem] w-fit transition-all duration-200 ease-in-out cursor-pointer disabled:cursor-context-menu flex items-center justify-center gap-[0.5rem] ",
   {
     variants: {
       intent: {
