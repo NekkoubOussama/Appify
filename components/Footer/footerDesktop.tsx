@@ -64,13 +64,22 @@ export default function FooterDesktop() {
         ))}
       </div>
 
-      <div className="my-8 border-t border-gray-300/50 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+      <div className="my-8 border-t border-gray-300/50 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm text-center">
         <p>Copyright © 2024 Webdev. All rights reserved</p>
         <div className="flex items-center space-x-4 mt-4 md:mt-0">
           <p>Social:</p>
-          <Facebook size={15} className="hover:text-gray-800 cursor-pointer" />
-          <Twitter size={15} className="hover:text-gray-800 cursor-pointer" />
-          <Dribbble size={15} className="hover:text-gray-800 cursor-pointer" />
+          <Facebook
+            size={15}
+            className="hover:text-gray-800 hover:scale-110 animate-wiggle hover:animate-none cursor-pointer"
+          />
+          <Twitter
+            size={15}
+            className="hover:text-gray-800 hover:scale-110 animate-wiggle hover:animate-none cursor-pointer"
+          />
+          <Dribbble
+            size={15}
+            className="hover:text-gray-800 hover:scale-110 animate-wiggle hover:animate-none cursor-pointer"
+          />
         </div>
       </div>
     </div>

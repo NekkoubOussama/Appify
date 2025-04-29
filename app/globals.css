@@ -74,20 +74,27 @@ h2 {
 }
 
 @layer utilities {
-  .fade-in {
+  .animate-fade-in {
     animation: fade-in 1.3s ease-in-out forwards;
   }
 
-  .fade-left {
+  .animate-fade-left {
     animation: fade-left 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
   }
 
-  .pop {
+  .animate-fade-right {
+    animation: fade-right 1.3s cubic-bezier(0.65, 0, 0.35, 1) 1.4s forwards;
+  }
+
+  .animate-pop {
     animation: pop 1s ease-in-out forwards;
   }
 
-  .flip-right {
-    animation: flip-right 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  .animate-flip-right {
+    animation: flip-right 0.9s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  }
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
   }
 }
 
@@ -121,6 +128,21 @@ h2 {
   }
 }
 
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(150px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
 @keyframes pop {
   0% {
     opacity: 0;
@@ -141,7 +163,15 @@ h2 {
     transform: perspective(1000px) rotateY(0deg) scale(1);
   }
 }
-
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
 .embla {
   overflow: hidden;
   width: 90%;

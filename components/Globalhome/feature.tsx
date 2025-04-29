@@ -27,7 +27,7 @@ const features = [
 export default function Feature() {
   return (
     <section className="bg-[#fdf2f8] pt-[8vh] md:pt-[12vh] w-full pb-20">
-      <h2 className="text-center">It’s Everything you will ever need</h2>
+      <h2 className="text-center px-2">It’s Everything you will ever need</h2>
       <div className="grid mt-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto w-[90%] sm:w-[80%]">
         {features.map(({ icon: Icon, color, text }, index) => (
           <BoxFeature

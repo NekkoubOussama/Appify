@@ -21,7 +21,7 @@ export function BoxWhy(props: BoxProps) {
       ref={ref}
       className={clsx(
         "flex flex-col justify-center items-center max-w-[240px] mx-auto transition-all opacity-0",
-        inView ? "fade-left" : ""
+        inView ? "animate-fade-left" : ""
       )}
       style={{ animationDelay: `${props.index * 200}ms` }}
     >
@@ -51,7 +51,7 @@ export function BoxFeature(props: Box2Props) {
       ref={ref}
       className={clsx(
         "flex items-center justify-center p-4 bg-white rounded-lg shadow-md space-x-3 opacity-0 transform transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:shadow-xl hover:scale-105 hover:-translate-y-1 hover:ring-1 hover:ring-gray-200 ",
-        inView ? "flip-right " : ""
+        inView ? "animate-flip-right " : ""
       )}
       style={{ animationDelay: `${props.index * 250}ms` }}
     >
@@ -133,7 +133,7 @@ export function PriceCard(props: Card2Props) {
       ref={ref}
       className={clsx(
         "bg-white p-12 rounded-lg shadow-lg opacity-0",
-        inView ? "fade-in " : ""
+        inView ? "animate-fade-in " : ""
       )}
     >
       <p className="mt-8 text-xl font-semibold text-blue-600 text-center">
