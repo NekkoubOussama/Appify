@@ -1,4 +1,4 @@
-import Button from "@/components/button";
+import { LinkButton } from "@/components/link";
 import React from "react";
 
 export default function NotFound() {
@@ -12,9 +12,9 @@ export default function NotFound() {
         <p className="mt-8 mb-12 lg:mt-11 lg:mb-14 text-lg text-gray-500 max-w-md max-lg:mx-auto ">
           You can either stay and chill here, or go back to the beginning.
         </p>
-        <Button size={"normal"} intent={"primary"} className="max-lg:mx-auto">
-          back to home
-        </Button>
+        <LinkButton link="/" className="max-lg:mx-auto">
+          Back To Home
+        </LinkButton>
       </div>
     </div>
   );

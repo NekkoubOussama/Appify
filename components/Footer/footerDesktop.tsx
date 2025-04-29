@@ -71,14 +71,17 @@ export default function FooterDesktop() {
           <Facebook
             size={15}
             className="hover:text-gray-800 hover:scale-110 animate-wiggle hover:animate-none cursor-pointer"
+            href="https://www.facebook.com/"
           />
           <Twitter
             size={15}
             className="hover:text-gray-800 hover:scale-110 animate-wiggle hover:animate-none cursor-pointer"
+            href="https://x.com/"
           />
           <Dribbble
             size={15}
             className="hover:text-gray-800 hover:scale-110 animate-wiggle hover:animate-none cursor-pointer"
+            href="https://dribbble.com/"
           />
         </div>
       </div>
