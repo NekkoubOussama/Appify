@@ -58,7 +58,7 @@ export default function why() {
         ))}
       </div>
       <div className="lg:flex justify-between w-[90%] sm:w-[80%] h-full mx-auto py-24">
-        <div className="fade-in ">
+        <div className=" animate-fade-in ">
           <Image src={Picture} alt="Picture" width={500} height={500} />
         </div>
         <div className="lg:w-[50%]  lg:p-12 p-6">
