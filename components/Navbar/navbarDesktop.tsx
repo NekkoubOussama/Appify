@@ -66,7 +66,7 @@ export default function NavbarDesktop() {
             Join Now
           </Button>
           <AlignRight
-            size={32}
+            size={36}
             className="text-black cursor-pointer lg:hidden"
             onClick={() => setOpen(true)}
           />

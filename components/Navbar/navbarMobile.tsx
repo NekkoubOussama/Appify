@@ -33,11 +33,10 @@ export default function NavbarMobile({
           open ? "translate-x-0 delay-300" : "-translate-x-full delay-300 "
         )}
       >
-        <div className=" flex flex-row justify-between items-center p-7">
+        <div className=" flex flex-row justify-between items-center p-9">
           <Logo color="text-white" />
           <X
-            width={26}
-            height={26}
+            size={34}
             color="white"
             className="cursor-pointer"
             onClick={() => setOpen(false)}
