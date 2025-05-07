@@ -1,5 +1,19 @@
+import Client from "@/components/Globalhome/client";
+import Feature from "@/components/Globalhome/feature";
+import Hero from "@/components/Globalhome/hero";
+import Offer from "@/components/Globalhome/offer";
+import Price from "@/components/Globalhome/price";
+import Why from "@/components/Globalhome/why";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"></div>
+    <div>
+      <Hero />
+      <Why />
+      <Feature />
+      <Client />
+      <Price />
+      <Offer />
+    </div>
   );
 }

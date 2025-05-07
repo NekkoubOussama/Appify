@@ -1,1 +1,186 @@
 @import "tailwindcss";
+:root {
+  --font-poppins: "Poppins", sans-serif;
+}
+html {
+  font-family: var(--font-poppins);
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: #1d4ed8;
+  --color-secondary: #4d5664;
+  --color-info: #6b7280;
+  --color-Warning: #fbc02d;
+  --color-Error: #e53835;
+  --color-Success: #22c55e;
+  --color-shade1: #251754;
+  --color-shade2: #1e3a8a;
+  --color-shade3: #3b82f6;
+  --color-shade4: #2563eb;
+  --color-shade5: #2590eb;
+  --color-shade6: #1e40af;
+  --color-shade7: #172554;
+  --color-bg1: #f7f6fb;
+  --color-bg2: #fdf2f8;
+  --color-bg3: #edfbff;
+
+  --color-grey: #374151;
+  --color-l_grey: #8f95a0;
+  --color-silver: #f3f4f6;
+}
+
+/* Headings */
+h1 {
+  font-weight: 700;
+  line-height: 2.5rem;
+  font-size: 2.25rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    line-height: 3.5rem;
+  }
+}
+h2 {
+  font-weight: 700;
+  line-height: 2rem;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@theme shadows {
+  --shadow-2px: 0px 2px 4px rgba(171, 190, 209, 0.6);
+  --shadow-4px: 0px 4px 8px rgba(171, 190, 209, 0.4);
+  --shadow-6px: 0px 6px 12px rgba(171, 190, 209, 0.3);
+  --shadow-8px: 0px 8px 16px rgba(171, 190, 209, 0.4);
+  --shadow-16px: 0px 16px 32px rgba(171, 190, 209, 0.3);
+}
+
+@utility text-Mediumbody4 {
+  @apply text-[12px] leading-[16px] font-medium;
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 1.3s ease-in-out forwards;
+  }
+
+  .animate-fade-left {
+    animation: fade-left 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  }
+
+  .animate-fade-right {
+    animation: fade-right 1.3s cubic-bezier(0.65, 0, 0.35, 1) 0.95s forwards;
+  }
+
+  .animate-pop {
+    animation: pop 1s ease-in-out forwards;
+  }
+
+  .animate-flip-right {
+    animation: flip-right 0.9s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  }
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(110px);
+  }
+  60% {
+    opacity: 0.6;
+    transform: translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(150px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes flip-right {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(90deg) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0deg) scale(1);
+  }
+}
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+.embla {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
