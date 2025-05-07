@@ -13,7 +13,7 @@ export default function NotFound() {
           You can either stay and chill here, or go back to the beginning.
         </p>
         <LinkButton link="/" className="max-lg:mx-auto">
-          Back To Home
+          Back to home
         </LinkButton>
       </div>
     </div>
