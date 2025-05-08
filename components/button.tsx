@@ -7,12 +7,12 @@ const buttonVariants = cva(
     variants: {
       intent: {
         primary:
-          "bg-primary text-white shadow-sm hover:bg-shade2 font-semibold rounded-full",
+          "bg-primary text-white shadow-sm hover:bg-shade2 font-semibold rounded-full hover:ring hover:ring-shade2 hover:ring-offset-2 hover:ring-2  ",
         secondary:
-          "bg-silver text-black shadow-sm hover:bg-shade6 hover:text-white font-medium rounded-full",
+          "bg-silver text-black shadow-sm hover:bg-shade6 hover:text-white font-medium rounded-full hover:ring hover:ring-shade6 hover:ring-offset-2 hover:ring-2 ",
         tertiary: "bg-white text-shade2 hover:text-shade7 font-semibold",
         square:
-          "bg-blue-900 text-white hover:bg-blue-950 font-semibold shadow-sm",
+          "bg-blue-900 text-white hover:bg-blue-950 font-semibold shadow-sm ",
       },
       size: {
         big: "py-4 px-8 md:px-8 md:py-4 text-[1rem] md:text-lg",
