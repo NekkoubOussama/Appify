@@ -12,7 +12,7 @@ const buttonVariants = cva(
           "bg-silver text-black shadow-sm hover:bg-shade6 hover:text-white font-medium rounded-full hover:ring hover:ring-shade6 hover:ring-offset-2 hover:ring-2 ",
         tertiary: "bg-white text-shade2 hover:text-shade7 font-semibold",
         square:
-          "bg-blue-900 text-white hover:bg-blue-950 font-semibold shadow-sm ",
+          "bg-blue-900 text-white font-semibold shadow-sm transition-all duration-300 ease-in-out hover:bg-blue-950 hover:scale-105 hover:shadow-md active:scale-100 active:shadow-none",
       },
       size: {
         big: "py-4 px-8 md:px-8 md:py-4 text-[1rem] md:text-lg",
