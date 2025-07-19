@@ -3,7 +3,7 @@ import React from "react";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center m-auto bg-bg1 h-screen pt-[6vh] md:pt-[12vh] w-full pb-[2vh] px-6 ">
+    <div className="flex flex-col lg:flex-row items-center justify-center m-auto h-screen w-full pb-[2vh] px-6 ">
       <div className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 aspect-square bg-bg1 rounded-4xl text-[#c6005c] font-bold flex items-center justify-center lg:text-[8rem] md:text-[6rem] text-[4.5rem] border-8 border-[#c6005c] animate-bounce ">
         404
       </div>

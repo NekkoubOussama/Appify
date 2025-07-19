@@ -37,7 +37,7 @@ export default function NavbarDesktop() {
   }, []);
 
   return (
-    <div
+    <header
       className={clsx(
         "w-full transition-all duration-200 h-[12vh] z-30  top-0 left-0 right-0",
         navBg
@@ -62,9 +62,11 @@ export default function NavbarDesktop() {
         </ul>
         <NavbarMobile open={open} setOpen={setOpen} />
         <div className="flex items-center space-x-4 lg:space-x-0">
-          <Button intent={"primary"} size={"normal"}>
-            Join Now
-          </Button>
+          <Link href="/login">
+            <Button intent="primary" size="normal">
+              Join Now
+            </Button>
+          </Link>
           <AlignRight
             size={36}
             className="text-black cursor-pointer lg:hidden"
@@ -72,6 +74,6 @@ export default function NavbarDesktop() {
           />
         </div>
       </div>
-    </div>
+    </header>
   );
 }
