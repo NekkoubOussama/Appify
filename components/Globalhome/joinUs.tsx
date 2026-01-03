@@ -13,7 +13,7 @@ export default function JoinUs() {
   const [password, setPassword] = useState("");
   const score = getPasswordScore(password);
   const level = getPasswordLevel(score);
-
+  console.log(state, "state");
   return (
     <form action={formAction} className="space-y-4">
       <input
@@ -47,6 +47,12 @@ export default function JoinUs() {
         placeholder="Workspace Name (optional)"
         className="border border-gray-300 p-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c6005c]"
       />
+      {state.error?.WorkspaceName && (
+        <p className="text-red-400 text-sm">
+          {" "}
+          * {state.error.WorkspaceName?.join(", ")}
+        </p>
+      )}
       <input
         name="Password"
         type="password"
@@ -80,7 +86,7 @@ export default function JoinUs() {
         ) : state.success ? (
           "Account created successfully!"
         ) : (
-          "Create Account"
+          "Failed try again!"
         )}
       </Button>
     </form>
