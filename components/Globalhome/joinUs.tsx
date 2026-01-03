@@ -84,9 +84,9 @@ export default function JoinUs() {
         {ispending ? (
           <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin block"></span>
         ) : state.success ? (
-          "Account created successfully!"
+          "Account Created Successfully!"
         ) : (
-          "Failed try again!"
+          "Create Account"
         )}
       </Button>
     </form>
