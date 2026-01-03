@@ -32,9 +32,7 @@ export async function myAction(prevState: FormState, formData: FormData) {
     UserName: formData.get("UserName"),
     Email: formData.get("Email"),
     WorkspaceName:
-      formData.get("WorkspaceName") === ""
-        ? undefined
-        : formData.get("WorkspaceName"),
+      formData.get("WorkspaceName")?.toString().trim() || undefined,
     Password: formData.get("Password"),
   };
 
