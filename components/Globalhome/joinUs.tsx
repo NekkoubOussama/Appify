@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useActionState, useState } from "react";
+import React, { useActionState, useEffect, useState } from "react";
 import { myAction } from "@/app/actions/contact";
 import Button from "@/components/button";
 import { getPasswordLevel, getPasswordScore } from "../passwordTest";
@@ -11,9 +11,16 @@ export default function JoinUs() {
     error: {},
   });
   const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    if (state.success) {
+      setPassword("");
+    }
+  }, [state.success]);
+
   const score = getPasswordScore(password);
   const level = getPasswordLevel(score);
-  console.log(state, "state");
+
   return (
     <form action={formAction} className="space-y-4">
       <input

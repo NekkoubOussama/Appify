@@ -4,7 +4,7 @@ import { myAction } from "@/app/actions/contact";
 import Button from "@/components/button";
 import { getPasswordLevel, getPasswordScore } from "@/components/passwordTest";
 import { useRouter } from "next/navigation";
-import { useActionState, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 
 export default function JoinNowModal() {
   const router = useRouter();
@@ -13,6 +13,12 @@ export default function JoinNowModal() {
     success: false,
     error: {},
   });
+
+  useEffect(() => {
+    if (state.success) {
+      setPassword("");
+    }
+  }, [state.success]);
 
   const score = getPasswordScore(password);
   const level = getPasswordLevel(score);
