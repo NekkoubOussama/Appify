@@ -1,6 +1,7 @@
 "use server";
 
 import { z } from "zod";
+// import { redirect } from "next/navigation";
 
 export type FormState = {
   success: boolean;
@@ -45,4 +46,5 @@ export async function myAction(prevState: FormState, formData: FormData) {
     };
   }
   return { success: true };
+  // redirect("/dashboard"); in case i have dashboard page
 }
