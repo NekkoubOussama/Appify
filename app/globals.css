@@ -184,3 +184,18 @@ h2 {
   flex: 0 0 100%;
   min-width: 0;
 }
+
+/* grid anime */
+.grid-reveal {
+  position: relative;
+  overflow: hidden;
+}
+.grid-reveal.is-visible .tiles span {
+  animation: tileOut 0.4s ease forwards;
+  animation-delay: calc(var(--i) * 0.08s);
+}
+@keyframes tileOut {
+  to {
+    opacity: 0;
+  }
+}

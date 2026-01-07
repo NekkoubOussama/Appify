@@ -1,13 +1,13 @@
 import React from "react";
 import { BoxWhy } from "../box";
 import Picture from "@/public/images/a.jpg";
-import Image from "next/image";
 import I1 from "@/public/images/i1.png";
 import I2 from "@/public/images/i2.png";
 import I3 from "@/public/images/i3.png";
 import I4 from "@/public/images/i4.png";
 import Button from "../button";
 import { Check } from "lucide-react";
+import ImageAniame from "../animationImage";
 
 const boxContents = [
   {
@@ -58,9 +58,7 @@ export default function why() {
         ))}
       </div>
       <div className="lg:flex justify-between w-[90%] sm:w-[80%] h-full mx-auto py-24">
-        <div className=" animate-fade-in ">
-          <Image src={Picture} alt="Picture" width={500} height={500} />
-        </div>
+        <ImageAniame image={Picture} />
         <div className="lg:w-[50%]  lg:p-12 p-6">
           <p className="text-[#f97316] font-semibold ">
             Audience tracking and insights
