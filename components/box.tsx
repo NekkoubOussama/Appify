@@ -72,7 +72,7 @@ type CardProps = {
 };
 export function ClientCard(props: CardProps) {
   return (
-    <div className="flex flex-col-reverse lg:flex-row w-[90%] relative mx-2 p-6 bg-white shadow-lg rounded-lg mt-10 embla__slide lg:mx-10">
+    <div className="flex flex-col-reverse lg:flex-row w-[95%] relative mx-auto p-6 bg-white shadow-lg rounded-lg my-5">
       <Quote
         color="#e4e4e4"
         strokeWidth={2}

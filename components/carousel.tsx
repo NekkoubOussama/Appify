@@ -47,28 +47,35 @@ export function Carousel() {
     }
   }, [emblaApi]);
   return (
-    <div className="embla w-full relative" ref={emblaRef}>
-      <div className="lg:w-[80%] mx-auto mt-20 embla__container">
-        {clientsReview.map((clientReview, index) => (
-          <ClientCard
-            key={index}
-            Text={clientReview.Text}
-            Icon={clientReview.Icon}
-            Name={clientReview.Name}
-            Job={clientReview.Job}
-            Rating={clientReview.Rating}
-          />
-        ))}
+    <div className="embla w-full relative  ">
+      <div className="embla__viewport overflow-hidden mt-25" ref={emblaRef}>
+        <div className="embla__container lg:w-[85%] mx-auto">
+          {clientsReview.map((clientReview, index) => (
+            <div
+              key={index}
+              className="embla__slide flex-[0_0_100%] lg:flex-[0_0_90%] px-4"
+            >
+              <ClientCard
+                key={index}
+                Text={clientReview.Text}
+                Icon={clientReview.Icon}
+                Name={clientReview.Name}
+                Job={clientReview.Job}
+                Rating={clientReview.Rating}
+              />{" "}
+            </div>
+          ))}
+        </div>
       </div>
       <div className="embla__controls flex flex-row justify-between ">
         <button
-          className="embla__prev text-white bg-black/35 rounded-full h-10 w-10 lg:flex justify-center items-center hover:bg-black/70 m-1 absolute top-2/3 -translate-y-2/3 left-28 hidden  "
+          className="embla__prev text-white bg-black/35 rounded-full h-10 w-10 lg:flex justify-center items-center hover:bg-black/70 m-1 absolute top-3/5 -translate-y-3/5 left-28 hidden  "
           onClick={scrollPrev}
         >
           <ChevronsLeft size={43} strokeWidth={1.25} />
         </button>
         {scrollSnaps.length > 0 && (
-          <div className="embla__dots flex gap-2 justify-center mt-4 absolute bottom-5 left-1/2 -translate-x-1/2">
+          <div className="embla__dots flex gap-2 justify-center mt-4 absolute bottom-10 left-1/2 -translate-x-1/2">
             {scrollSnaps.map((_, index) => (
               <button
                 key={index}
@@ -81,7 +88,7 @@ export function Carousel() {
           </div>
         )}
         <button
-          className="embla__next  text-white bg-black/35 rounded-full h-10 w-10 lg:flex justify-center items-center  hover:bg-black/70 m-1 absolute top-2/3 -translate-y-2/3 right-28 hidden  "
+          className="embla__next  text-white bg-black/35 rounded-full h-10 w-10 lg:flex justify-center items-center  hover:bg-black/70 m-1 absolute top-3/5 -translate-y-3/5 right-28 hidden  "
           onClick={scrollNext}
         >
           <ChevronsRight size={43} strokeWidth={1.25} />
