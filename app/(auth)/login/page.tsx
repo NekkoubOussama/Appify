@@ -1,4 +1,5 @@
 import JoinUs from "@/components/Globalhome/joinUs";
+import Link from "next/link";
 
 export default function FullSignupPage() {
   return (
@@ -10,14 +11,14 @@ export default function FullSignupPage() {
         </p>
         <JoinUs />
         <p className="text-xs text-gray-500 mt-4 text-center">
-          By joining, you acknowledge that you understand and agree to the{" "}
-          <a href="#" className="underline">
+          By joining, you acknowledge that you understand and agree to the
+          <Link href="#" className="underline">
             Terms of Service
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a href="#" className="underline">
+          <Link href="#" className="underline">
             Privacy Policy
-          </a>
+          </Link>
           .
         </p>
       </div>
