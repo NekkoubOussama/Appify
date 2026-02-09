@@ -64,6 +64,7 @@ export default function JoinUs() {
         name="Password"
         type="password"
         placeholder="Create Password"
+        autoComplete="new-password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         className="border border-gray-300 p-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c6005c]"
@@ -79,15 +80,21 @@ export default function JoinUs() {
           level === ""
             ? "hidden"
             : level === "weak"
-            ? "text-red-500"
-            : level === "medium"
-            ? "text-yellow-500"
-            : "text-green-500"
+              ? "text-red-500"
+              : level === "medium"
+                ? "text-yellow-500"
+                : "text-green-500"
         }`}
       >
         Strength: {level}
       </p>
-      <Button type="submit" intent="primary" size="normal" className="mx-auto">
+      <Button
+        type="submit"
+        intent="primary"
+        size="normal"
+        disabled={ispending || state.success}
+        className="mx-auto"
+      >
         {ispending ? (
           <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin block"></span>
         ) : state.success ? (

@@ -3,6 +3,7 @@
 import { myAction } from "@/app/actions/contact";
 import Button from "@/components/button";
 import { getPasswordLevel, getPasswordScore } from "@/components/passwordTest";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState } from "react";
 
@@ -75,10 +76,10 @@ export default function JoinNowModal() {
               level === ""
                 ? "hidden"
                 : level === "weak"
-                ? "text-red-500"
-                : level === "medium"
-                ? "text-yellow-500"
-                : "text-green-500"
+                  ? "text-red-500"
+                  : level === "medium"
+                    ? "text-yellow-500"
+                    : "text-green-500"
             }`}
           >
             Strength: {level}
@@ -93,6 +94,7 @@ export default function JoinNowModal() {
             intent="primary"
             size="normal"
             className="mx-auto"
+            disabled={ispending || state.success}
           >
             {ispending ? (
               <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin block"></span>
@@ -105,13 +107,13 @@ export default function JoinNowModal() {
         </form>
         <p className="text-xs text-gray-500 mt-4 text-center">
           By joining, you agree to our{" "}
-          <a href="#" className="underline">
+          <Link href="#" className="underline">
             Terms
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a href="#" className="underline">
+          <Link href="#" className="underline">
             Privacy Policy
-          </a>
+          </Link>
           .
         </p>
       </div>
