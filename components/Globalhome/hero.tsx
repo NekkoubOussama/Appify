@@ -36,7 +36,13 @@ export default function Hero() {
           </div>
         </div>
         <div className="opacity-0 animate-fade-right max-lg:hidden">
-          <Image src={Phero} alt="Hero picture" width={700} height={700} />
+          <Image
+            src={Phero}
+            alt="Hero picture"
+            width={700}
+            height={700}
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
