@@ -41,7 +41,7 @@ const Texts = [
   { text: "Enjoy unlimited features by paid plan" },
   { text: "Manage ultimate conversation" },
 ];
-export default function why() {
+export default function Why() {
   return (
     <section className=" bg-white py-[4vh] mt-6 md:pt-[12vh] w-full ">
       <h2 className="text-center">Why You Choose This Application</h2>
