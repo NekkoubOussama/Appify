@@ -9,11 +9,11 @@ import clsx from "clsx";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/About" },
-  { label: "Feature", href: "/Feature" },
-  { label: "Testimonial", href: "/Testimonial" },
-  { label: "Blog", href: "/Blog" },
-  { label: "Contact", href: "/Contact" },
+  { label: "About", href: "/about" },
+  { label: "Feature", href: "/feature" },
+  { label: "Testimonial", href: "/testimonial" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function NavbarDesktop() {
@@ -42,7 +42,7 @@ export default function NavbarDesktop() {
         "w-full transition-all duration-200 h-[12vh] z-30  top-0 left-0 right-0",
         navBg
           ? "bg-white backdrop-blur shadow-md fixed"
-          : "bg-transparent fixed backdrop-blur-sm"
+          : "bg-transparent fixed backdrop-blur-sm",
       )}
     >
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
